@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-RDrive::Application.config.secret_token = 'b1c679c05e915ab4307ffe8350a87baa5fd7c5731047ef5d66178a83a99e0d782e7ef01f28d96066ae0286950ac4b1dc56d0baa8f040d0d5a5d6c13c01d53259'
+RDrive::Application.config.secret_token = '88e59c151df013504180d15f9ead1908090ff538f031bd6a1665a74171a304222b5e7a5475c47bf370238988c922c2086bc1480b52bc75932331f2fadc9ed9ac'
