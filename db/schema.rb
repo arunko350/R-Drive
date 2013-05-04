@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130504114931) do
+ActiveRecord::Schema.define(:version => 20130504115623) do
 
   create_table "colleges", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130504114931) do
     t.datetime "updated_at",                    :null => false
     t.string   "university"
     t.string   "code"
+    t.string   "website"
   end
 
 end
