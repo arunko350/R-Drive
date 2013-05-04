@@ -1,3 +1,37 @@
 <% title "College Registraion" %>
 
 <h2>College Registration</h2>
+
+
+<%= form_for @college do |f| %>
+	
+	<div>
+		<%= f.label :name, "College Name" %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :code, "College Code" %>
+		<%= f.text_field :code %>
+	</div>
+
+	<div>
+		<%= f.label :description, "Description" %>
+		<%= f.text_area :description, :rows => "8" %>
+	</div>
+
+	<div>
+		<%= f.label :university, "University" %>
+		<%= f.text_field :university %>
+	</div>
+
+	<div>
+		<%= f.label :website, "Website" %>
+		<%= f.text_field :website %>
+	</div>
+
+	<div>
+		<%= f.submit "Submit" %>
+	</div>
+
+<% end -%>
