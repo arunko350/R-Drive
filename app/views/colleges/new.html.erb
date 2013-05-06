@@ -7,7 +7,7 @@
 	
 	<div>
 		<%= f.label :name, "College Name" %>
-		<%= f.text_field :name %>
+		<%= f.text_field :name, :autofocus => true %>
 	</div>
 
 	<div>
@@ -29,6 +29,48 @@
 		<%= f.label :website, "Website" %>
 		<%= f.text_field :website %>
 	</div>
+
+	<%= f.fields_for :contact do |contact| %>
+		<div>
+			<%= contact.label :email, "Email" %>
+			<%= contact.text_field :email %>
+		</div>
+		<div>
+			<%= contact.label :office, "Office Phone" %>
+			<%= contact.text_field :office %>
+		</div>
+		<div>
+			<%= contact.label :mobile, "Mobile Phone" %>
+			<%= contact.text_field :mobile %>
+		</div>
+	<% end %>
+
+	<%= f.fields_for :address do |address| %>
+		<div>
+			<%= address.label :line1, "Address Line 1" %>
+			<%= address.text_area :line1, :rows => "8" %>
+		</div>
+		<div>
+			<%= address.label :line2, "Address Line 2" %>
+			<%= address.text_area :line2, :rows => "8" %>
+		</div>
+		<div>
+			<%= address.label :city %>
+			<%= address.text_field :city %>
+		</div>
+		<div>
+			<%= address.label :state %>
+			<%= address.text_field :state %>
+		</div>
+		<div>
+			<%= address.label :country %>
+			<%= address.text_field :country %>
+		</div>
+		<div>
+			<%= address.label :pincode %>
+			<%= address.text_field :pincode %>
+		</div>
+	<% end %>
 
 	<div>
 		<%= f.submit "Submit" %>
