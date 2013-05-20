@@ -10,7 +10,7 @@ class College < ActiveRecord::Base
   validate :contact_uniqueness_validation
 
   private
-  def contact_address_validation 
+  def contact_address_validation
   	errors.add(:base, "Email can't be empty") if self.contact[:email].blank?
   	errors.add(:base, "Atleast provide one phone number") if self.contact[:office].blank? && self.contact[:mobile].blank?
   	errors.add(:base, "City can't be blank") if self.address[:city].blank?
@@ -23,6 +23,7 @@ class College < ActiveRecord::Base
 
   def contact_uniqueness_validation
   	errors.add(:base, "Contact Email appears to be of someother college's") if College.where("contact -> 'email' = :contact_email", :contact_email => self.contact[:email].strip).exists?
+  	errors.add(:base, "Contact Phone appears to be of someother college's") if College.where("contact -> 'office' = :contact_office", :contact_office => self.contact[:office].strip).exists? or College.where("contact -> 'mobile' = :contact_mobile", :contact_mobile => self.contact[:mobile].strip).exists?
   end
 
 end
