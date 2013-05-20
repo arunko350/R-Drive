@@ -9,6 +9,8 @@ class College < ActiveRecord::Base
   validate :contact_address_validation
   validate :contact_uniqueness_validation
 
+  has_many	:users
+
   private
   def contact_address_validation
   	errors.add(:base, "Email can't be empty") if self.contact[:email].blank?

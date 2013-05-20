@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :phone
 
-  belongs_to	:roles
+  belongs_to	:role
+  belongs_to	:college
 
 end
