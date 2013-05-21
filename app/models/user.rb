@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   belongs_to	:role
   belongs_to	:college
 
+	def role? role
+		self.role == role.to_s
+	end
+
 end
