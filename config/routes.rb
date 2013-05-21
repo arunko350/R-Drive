@@ -1,6 +1,14 @@
 RDrive::Application.routes.draw do
-  
+
   devise_for :users
+
+	devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+
+  authenticated :user do
+    root :to => "users#index"
+  end
 
   resources :colleges
 
