@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522035711) do
+ActiveRecord::Schema.define(:version => 20130522040236) do
 
   create_table "colleges", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(:version => 20130522035711) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "streams", :force => true do |t|
+    t.integer  "college_id"
+    t.integer  "course_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
