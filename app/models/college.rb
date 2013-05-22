@@ -10,6 +10,7 @@ class College < ActiveRecord::Base
   validate :contact_uniqueness_validation
 
   has_many	:users
+  has_and_belongs_to_many	:courses
 
   private
   def contact_address_validation
