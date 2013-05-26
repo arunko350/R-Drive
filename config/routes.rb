@@ -1,4 +1,20 @@
 RDrive::Application.routes.draw do
+<<<<<<< HEAD
+=======
+
+  devise_for :users
+
+	authenticated :user do
+    root :to => "users#index"
+  end
+
+	devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+
+  resources :colleges
+
+>>>>>>> 1480b8d37c03c9fd9ebe067fc35e66e4645527a1
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
