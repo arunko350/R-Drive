@@ -1,0 +1,6 @@
+--- 
+cursor_positions: 
+  - :path: config/database.yml
+    :cursor_offset: 0
+    :timestamp: 2013-05-04 19:41:06 +05:30
+files_to_retain: 0
